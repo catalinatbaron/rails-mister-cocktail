@@ -5,6 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+require 'faker'
+
+puts 'Destroying all the shit'
+Dose.destroy_all
+Ingredient.destroy_all
+Cocktail.destroy_all
+puts 'Creating'
+
+Cocktail.create(name: 'Margarita')
+Cocktail.create(name: 'Cuba Libre')
+Cocktail.create(name: 'Cosmopolitan')
+
+100.times do
+  Ingredient.create(
+    name: Faker::Food.fruits
+  )
+end
+
+puts 'the end'

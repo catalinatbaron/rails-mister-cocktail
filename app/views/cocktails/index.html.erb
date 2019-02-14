@@ -1,0 +1,38 @@
+<div class="banner" >
+    <div class="banner-content">
+    <h1>Mr Cocktail</h1>
+    <p>More than just a cocktail</p>
+    <a class="btn ">View</a>
+    </div>
+</div>
+
+<div class="cards-container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+          url(<%= asset_path 'red.jpg' %>);">
+          <div class="card-description">
+            <li><%= cocktail.name %></li>
+          </div>
+          <a class="card-link" href="<%= cocktail_path(cocktail) %>" ></a>
+        </div>
+        <div class="delete-card">
+            <li><%= link_to 'Delete', cocktail_path(cocktail), method: :delete %></li>
+          </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="add text-center">
+  <a href="<%= new_cocktail_path%>">Add a new cocktail</a>
+</div>
+
+
+
+
+
+
+
+

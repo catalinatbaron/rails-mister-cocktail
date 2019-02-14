@@ -2,23 +2,28 @@
     <div class="banner-content">
     <h1>Mr Cocktail</h1>
     <p>More than just a cocktail</p>
-    <a class="btn ">View</a>
+    <span class="hero__scroll aos-init aos-animate" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
+        Scroll down <br>
+        <i class="fas fa-chevron-down"></i>
+    </span>
+    <a href="http://github.com/michalsnik/aos" target="_blank" class="octocat aos-init aos-animate" data-aos="zoom-out" data-aos-delay="1500">
+    </a>
     </div>
 </div>
 
 <div class="cards-container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-4">
+      <div class="col-sm-12 col-offset-12">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-          url(<%= asset_path 'red.jpg' %>);">
+         url('<%= cl_image_path cocktail.photo, height: 150 %>')" data-aos="fade-up-right">
           <div class="card-description">
             <li><%= cocktail.name %></li>
           </div>
           <a class="card-link" href="<%= cocktail_path(cocktail) %>" ></a>
         </div>
         <div class="delete-card">
-            <li><%= link_to 'Delete', cocktail_path(cocktail), method: :delete %></li>
+            <li><%= link_to '<i class="fas fa-trash"></i>'.html_safe, cocktail_path(cocktail), method: :delete %></li>
           </div>
       </div>
     <% end %>

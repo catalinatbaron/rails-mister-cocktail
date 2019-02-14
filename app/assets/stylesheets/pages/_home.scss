@@ -1,1 +1,118 @@
 // Specific CSS for your home-page
+body{
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 50%), url('background-coc.jpg');
+  background-size: cover !important;
+  background-attachment: fixed;
+  font-family: Helvetica, sans-serif;
+  color: white;
+}
+
+li{
+  list-style-type: none;
+}
+
+/////////// banner  //////////////////
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  // background-size: cover !important;
+  // background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 40px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 16px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.btn{
+  color: white;
+  border: 1 px solid;
+  border-color: white;
+  padding: 5px 10px;
+  &:hover{
+  background-color: white;
+  opacity: 0.5;
+  border: 1 px solid;
+  border-color: white;
+  }
+}
+
+
+
+
+/////////// cards  //////////////////
+.cards-container{
+  margin: 20px;
+}
+
+.row{
+  width:300px;
+  margin: 0 auto;
+}
+
+.card {
+  margin:20px;
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+.card-description {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.card-description h2 {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+}
+.card-description p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+
+.delete-card{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.delete-card a {
+  color: white;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
+}
+
+/////////// Add a new cocktail //////
+
+.add a{
+  color:white;
+}
